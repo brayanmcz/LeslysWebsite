@@ -51,10 +51,7 @@ class ImageDetail extends Component {
             {this.props.image.fields.title}
           </MDBModalHeader>
           <MDBModalBody>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            {}
           </MDBModalBody>
           <MDBModalFooter>
             <MDBBtn color="pink accent-1" onClick={this.toggle(14)}>
