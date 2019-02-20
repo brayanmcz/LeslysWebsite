@@ -1,36 +1,65 @@
-import React, { Component } from 'react';
-import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from 'mdbreact';
+import React, { Component } from "react";
+import {
+  MDBContainer,
+  MDBBtn,
+  MDBModal,
+  MDBModalBody,
+  MDBModalHeader,
+  MDBModalFooter,
+  MDBRow,
+  MDBCol
+} from "mdbreact";
+// import styled from "styled-components";
+
+// const Wrapper = styled.div`
+  
+// `;
 
 class ImageDetail extends Component {
-state = {
-  modal14: this.props.isOpen
-}
+  state = {
+    modal14: this.props.isOpen
+  };
 
-toggle = nr => () => {
-  let modalNumber = 'modal' + nr
-  this.setState({
-    [modalNumber]: !this.state[modalNumber]
-  });
-}
-
-componentWillReceiveProps(){
+  toggle = nr => () => {
+    let modalNumber = "modal" + nr;
     this.setState({
-        modal14: this.props.isOpen
-    })
-}
+      [modalNumber]: !this.state[modalNumber]
+    });
+  };
 
-render() {
-  return (
+  componentWillReceiveProps() {
+    console.log("IMAGE: ", this.props.image.fields.photo.fields.file.url);
+    this.setState({
+      modal14: this.props.isOpen
+    });    
+  }
+
+  render() {
+    return (
       <MDBContainer>
         <MDBModal isOpen={this.state.modal14} toggle={this.toggle(14)} centered>
-          <MDBModalHeader toggle={this.toggle(14)}>MDBModal title</MDBModalHeader>
+        <MDBRow>
+        <MDBCol md="12">
+            <img
+              src={this.props.image.fields.photo.fields.file.url}
+              alt={this.props.image.fields.title}
+              className="img-fluid"
+            />
+        </MDBCol>
+      </MDBRow>
+          <MDBModalHeader toggle={this.toggle(14)}>
+            {this.props.image.fields.title}
+          </MDBModalHeader>
           <MDBModalBody>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
           </MDBModalBody>
           <MDBModalFooter>
-            <MDBBtn color="secondary" onClick={this.toggle(14)}>Close</MDBBtn>
+            <MDBBtn color="pink accent-1" onClick={this.toggle(14)}>
+              View Recipe
+            </MDBBtn>
           </MDBModalFooter>
         </MDBModal>
       </MDBContainer>

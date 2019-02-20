@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {
+  MDBContainer,
   MDBNavbar,
   MDBNavbarBrand,
   MDBNavbarNav,
@@ -9,6 +10,10 @@ import {
   MDBCollapse,
 } from "mdbreact";
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+`;
 
 class NavbarPage extends Component {
   state = {
@@ -28,7 +33,9 @@ class NavbarPage extends Component {
 
   render() {
     return (
+      <Wrapper>
       <MDBNavbar color="cyan" dark expand="md">
+      <MDBContainer>
         <MDBNavbarBrand>
           <Link to="/"><strong className="white-text">Lesly's Pastries</strong></Link>
         </MDBNavbarBrand>
@@ -53,7 +60,9 @@ class NavbarPage extends Component {
             </MDBNavItem>
           </MDBNavbarNav>
         </MDBCollapse>
+        </MDBContainer>
       </MDBNavbar>
+      </Wrapper>
     );
   }
 }
