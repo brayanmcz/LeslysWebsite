@@ -17,8 +17,10 @@ class ImageContainer extends Component {
   });
 
   componentDidMount() {
-    this.client.getEntries().then(entries => {
-        this.setState({
+    this.client.getEntries({"sys.contentType.sys.id": "imagePost"}).then(entries => {
+      console.log(entries);
+          
+      this.setState({
             images: entries.items
         })        
     });
