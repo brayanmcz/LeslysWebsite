@@ -13,10 +13,26 @@ class ImagePreview extends Component {
 
     this.state = {
       photoIndex: null,
-      isOpen: false,
+      modal14: true,
       images: []
     };
   }
+
+  // toggle(nr) {
+  //   console.log(nr);
+  //      let modalNumber = "modal" + nr;
+
+  //   this.setState({
+  //     [modalNumber]: !this.state[modalNumber]
+  // })
+  // }
+
+  toggle = nr => () => {
+    let modalNumber = "modal" + nr;
+    this.setState({
+      [modalNumber]: !this.state[modalNumber]
+    });
+  };
 
   componentDidMount() {
     this.setState({
@@ -24,12 +40,8 @@ class ImagePreview extends Component {
     });
   }
 
-  componentDidUpdate() {
-    console.log("ImagePreview: ", this.state.isOpen);
-  }
-
   render() {
-    const { photoIndex, isOpen } = this.state;
+    const { photoIndex } = this.state;
     return (
       this.state.images && (
         <Wrapper>
@@ -40,11 +52,14 @@ class ImagePreview extends Component {
                   <MDBCol md="4" key={index}>
                     <figure>
                       <img
-                        src={image.fields.photo.fields.file.url}
+                        src={image.fields.image[0].fields.file.url}
                         alt={image.fields.title}
                         className="img-fluid"
                         onClick={() =>
-                          this.setState({ photoIndex: index, isOpen: true })
+                          this.setState({ 
+                            photoIndex: index, 
+                            modal14: true 
+                          })
                         }
                       />
                     </figure>
@@ -52,12 +67,16 @@ class ImagePreview extends Component {
                 ))}
               </MDBRow>
             </div>
-            {isOpen && (
-              <ImageDetail
-                isOpen={this.state.isOpen}
+             { 
+              photoIndex !== null && 
+              ( 
+              <ImageDetail 
                 image={this.state.images[photoIndex]}
-              />
-            )}
+                modal14={this.state.modal14}
+                toggle={this.toggle}
+                />
+              )
+             }
           </MDBContainer>
         </Wrapper>
       )

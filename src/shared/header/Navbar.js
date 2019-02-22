@@ -17,8 +17,26 @@ const Wrapper = styled.div`
 
 class NavbarPage extends Component {
   state = {
-    isOpen: false
+    isOpen: false,
+    offset: 0
   };
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.listenToScroll)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.listenToScroll)
+  }
+
+  listenToScroll = (event) => {
+    const winScroll = window.scrollY;
+    console.log("Scroll: ", winScroll);
+    
+    this.setState({
+      offset: winScroll
+    });
+  }
 
   toggleFalse = () => {
     if (this.state.isOpen === true)
@@ -34,7 +52,7 @@ class NavbarPage extends Component {
   render() {
     return (
       <Wrapper>
-      <MDBNavbar color="cyan" dark expand="md">
+      <MDBNavbar className={this.state.offset > 100 ? "fixed-top" : ""} color="cyan" dark expand="md">
       <MDBContainer>
         <MDBNavbarBrand>
           <Link to="/"><strong className="white-text">Lesly's Pastries</strong></Link>
