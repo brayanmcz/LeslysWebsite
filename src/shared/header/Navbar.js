@@ -10,10 +10,6 @@ import {
   MDBCollapse,
 } from "mdbreact";
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-
-const Wrapper = styled.div`
-`;
 
 class NavbarPage extends Component {
   state = {
@@ -31,7 +27,7 @@ class NavbarPage extends Component {
 
   listenToScroll = (event) => {
     const winScroll = window.scrollY;
-    console.log("Scroll: ", winScroll);
+    // console.log("Scroll: ", winScroll);
     
     this.setState({
       offset: winScroll
@@ -51,8 +47,10 @@ class NavbarPage extends Component {
 
   render() {
     return (
-      <Wrapper>
-      <MDBNavbar className={this.state.offset > 100 ? "fixed-top" : ""} color="cyan" dark expand="md">
+      // <Wrapper>
+      //  TODO: Fix the 'jump'
+      //        When state.offset > 100 and true condition is fixed-top 
+      <MDBNavbar className={this.state.offset > 100 ? "" : ""} color="cyan" dark expand="md">
       <MDBContainer>
         <MDBNavbarBrand>
           <Link to="/"><strong className="white-text">Lesly's Pastries</strong></Link>
@@ -80,7 +78,7 @@ class NavbarPage extends Component {
         </MDBCollapse>
         </MDBContainer>
       </MDBNavbar>
-      </Wrapper>
+      // </Wrapper>
     );
   }
 }

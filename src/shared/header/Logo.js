@@ -16,7 +16,7 @@ const Wrapper = styled.div`
         margin: auto; 
 
         background-color: white;
-        border: 1px solid #00bcd4 ;
+        border: 2px solid #00bcd4 ;
     }
 `;
 

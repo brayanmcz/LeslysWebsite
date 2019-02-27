@@ -9,9 +9,6 @@ import {
   MDBRow,
   MDBCol
 } from "mdbreact";
-// import styled from "styled-components";
-// const Wrapper = styled.div`
-// `;
 
 class ImageDetail extends Component {
   state = {
