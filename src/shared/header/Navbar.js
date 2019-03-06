@@ -10,6 +10,7 @@ import {
   MDBCollapse,
 } from "mdbreact";
 import { Link } from 'react-router-dom';
+import * as Router from 'react-router';
 
 class NavbarPage extends Component {
   state = {
@@ -35,6 +36,7 @@ class NavbarPage extends Component {
   }
 
   toggleFalse = () => {
+    console.log("Router: ", Router);
     if (this.state.isOpen === true)
       this.setState({
         isOpen: false

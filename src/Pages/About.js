@@ -3,6 +3,7 @@ import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCol, MDBRow, MDBCon
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
+  	height: 80vh;
 	margin-top: 20px;
 	.card-top {
 		height: 100px;
