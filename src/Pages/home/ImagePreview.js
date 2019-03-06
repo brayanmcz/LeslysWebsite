@@ -13,8 +13,7 @@ const Wrapper = styled.div`
 		-khtml-user-select: none; /* Konqueror HTML */
 		-moz-user-select: none; /* Firefox */
 		-ms-user-select: none; /* Internet Explorer/Edge */
-		user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
+		user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 	}
 `;
 
@@ -61,15 +60,13 @@ class ImagePreview extends Component {
 													modal14: true
 												})}
 										>
-											<figure>
 												<img
 													src={image.fields.image[0].fields.file.url}
 													alt={image.fields.title}
 													className="img-fluid"
 												/>
-											</figure>
 
-											<MDBMask className="flex-  " overlay="white-slight">
+											<MDBMask className="flex-center mask" overlay="cyan-slight">
 												<p className="white-text">{image.fields.title}</p>
 											</MDBMask>
 										</MDBView>

@@ -59,6 +59,10 @@ const Wrapper = styled.div`
 	.small {
 		font-size: 70%;
 	}
+
+	.card{
+		margin-bottom: 20px !important;
+	}
 `;
 
 class AboutPage extends Component {
@@ -68,7 +72,7 @@ class AboutPage extends Component {
 				<MDBContainer>
 					<MDBRow>
 						<MDBCol sm="6" md="4" lg="3">
-							<MDBCard>
+							<MDBCard className="here">
 								<div className="card-top" />
 								<MDBCol>
 									<img
@@ -106,7 +110,7 @@ class AboutPage extends Component {
 								</MDBCardBody>
 							</MDBCard>
 						</MDBCol>
-						<MDBCol sm="6">
+						<MDBCol sm="6" md="8" lg="9">
 							<MDBCard>
 								<MDBCardBody>
 									<MDBCardTitle><em>Hi, thanks for being here!</em></MDBCardTitle>
