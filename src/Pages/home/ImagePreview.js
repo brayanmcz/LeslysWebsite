@@ -10,7 +10,6 @@ const Wrapper = styled.div`
 		cursor: pointer;
 		-webkit-touch-callout: none; /* iOS Safari */
 		-webkit-user-select: none; /* Safari */
-		-khtml-user-select: none; /* Konqueror HTML */
 		-moz-user-select: none; /* Firefox */
 		-ms-user-select: none; /* Internet Explorer/Edge */
 		user-select: none; /* Non-prefixed version, currently
@@ -51,7 +50,7 @@ class ImagePreview extends Component {
 						<div className="mdb-lightbox no-margin">
 							<MDBRow>
 								{this.state.images.map((image, index) => (
-									<MDBCol md="6" lg="4" xl="3" key={index}>
+									<MDBCol xs="12" sm ="6" md="6" lg="4" xl="3" key={index}>
 										<MDBView
 											className="image-detail"
 											hover

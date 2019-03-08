@@ -15,25 +15,8 @@ import * as Router from 'react-router';
 class NavbarPage extends Component {
   state = {
     isOpen: false,
-    offset: 0
+    offset: this.props.offset
   };
-
-  componentDidMount() {
-    window.addEventListener('scroll', this.listenToScroll)
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.listenToScroll)
-  }
-
-  listenToScroll = (event) => {
-    const winScroll = window.scrollY;
-    // console.log("Scroll: ", winScroll);
-    
-    this.setState({
-      offset: winScroll
-    });
-  }
 
   toggleFalse = () => {
     console.log("Router: ", Router);
@@ -52,7 +35,7 @@ class NavbarPage extends Component {
       // <Wrapper>
       //  TODO: Fix the 'jump'
       //        When state.offset > 100 and true condition is fixed-top 
-      <MDBNavbar className={this.state.offset > 100 ? "" : ""} color="cyan" dark expand="md">
+      <MDBNavbar className={this.props.offset >= 100 ? "fixed-top" : ""} color="cyan" dark expand="md">
       <MDBContainer>
         <MDBNavbarBrand>
           <Link to="/"><strong className="white-text">Lesly's Pastries</strong></Link>

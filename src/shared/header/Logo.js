@@ -6,6 +6,8 @@ const Wrapper = styled.div`
     position: relative;
 
     img {
+        /* height: ${props => props.size}; */
+        /* width: ${props => props.lineHeight}; */
         height: 80px;
         width: 80px;
         position: absolute;  
@@ -15,16 +17,22 @@ const Wrapper = styled.div`
         right: 0;  
         margin: auto; 
 
-        background-color: white;
+        /* background-color: white; */
+        background-color: ${props => props.white};
         border: 2px solid #00bcd4 ;
     }
 `;
 
 class Logo extends Component {
+
+    componentWillUpdate() {
+        console.log("props:", this.props);
+    }
+
     render() {
         return (
             <Wrapper>
-            <img src={LogoImage} className="rounded-circle mx-auto d-block" alt="aligment" />
+                <img src={LogoImage} className="rounded-circle mx-auto d-block" alt="aligment" />
             </Wrapper>
         );
     }

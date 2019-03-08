@@ -12,13 +12,14 @@ const Wrapper = styled.div`
 `;
 
 class Header extends Component {
+
     render () {
         return (
             <Wrapper>
                 <div className="header">
-                    <Logo/>
+                    <Logo size="40px" white="white"/>
                 </div>
-                <Navbar/>
+                <Navbar offset={this.props.offset}/>
             </Wrapper>
         );
     }

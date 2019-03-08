@@ -3,7 +3,6 @@ import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCol, MDBRow, MDBCon
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  	height: 80vh;
 	margin-top: 20px;
 	.card-top {
 		height: 100px;
@@ -26,7 +25,7 @@ const Wrapper = styled.div`
 
 	.icon-container {
 		padding: 10px;
-		paddin-left: 25px;
+		padding-left: 25px;
 	}
 
 	a {
@@ -34,11 +33,11 @@ const Wrapper = styled.div`
 	}
 
 	a:hover {
-		color: #00bcd4;
+		color: #00bcd4 !important;
 	}
 
 	a:link {
-		color: red;
+		color: black !important;
 	}
 
 	a:visited {
@@ -113,7 +112,8 @@ class AboutPage extends Component {
 									<MDBCardTitle><em>Hi, thanks for being here!</em></MDBCardTitle>
 									<MDBCardText>	
 									This is a test.
-									</MDBCardText>																					
+									
+									</MDBCardText>	
 								</MDBCardBody>
 							</MDBCard>
 						</MDBCol>
