@@ -11,8 +11,12 @@ import {
   Animation
 } from "mdbreact";
 import { Link } from 'react-router-dom';
-import * as Router from 'react-router';
 import Logo from './Logo';
+// import styled from 'styled-components';
+
+// const Wrapper = styled.div`
+
+// `;
 
 class NavbarPage extends Component {
   state = {
@@ -21,7 +25,6 @@ class NavbarPage extends Component {
   };
 
   toggleFalse = () => {
-    console.log("Router: ", Router);
     if (this.state.isOpen === true)
       this.setState({
         isOpen: false
@@ -38,9 +41,10 @@ class NavbarPage extends Component {
       <MDBNavbar className={this.props.offset >= 100 ? "fixed-top" : ""} color="cyan" dark expand="md">
       <MDBContainer>
         <MDBNavbarBrand>
-        <Animation type={this.props.offset > 60 ? "fadeInLeftBig" : "fadeOutLeftBig"} duration="0.5s">
-            <Logo size='40px' top='0' to="/"/>
-        </Animation>
+          <Animation type={this.props.offset > 50 ? "fadeInLeftBig" : "fadeOutLeftBig"} duration="1s">
+            <Link to="/"><Logo size='40px' top='0' to="/"/></Link>
+          </Animation> 
+        
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse} />
         <MDBCollapse id="navbarCollapse" isOpen={this.state.isOpen} navbar>

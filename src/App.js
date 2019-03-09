@@ -5,6 +5,7 @@ import Header from './shared/Header';
 import HomePage from './Pages/Home.js';
 import AboutPage from './Pages/About';
 import styled from 'styled-components';
+import ContactForm from './Pages/contact/ContactForm';
 
 const Wrapper = styled.div`
 
@@ -56,6 +57,7 @@ class App extends Component {
               <div className={this.state.offset >= 100 ? "component-container" : ""}>
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/about" component={AboutPage} />
+                <Route exact path="/contact" component={ContactForm}/>
               </div>              
             </Wrapper>
         </Router>

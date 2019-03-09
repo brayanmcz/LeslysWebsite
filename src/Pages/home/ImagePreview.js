@@ -50,7 +50,7 @@ class ImagePreview extends Component {
 						<div className="mdb-lightbox no-margin">
 							<MDBRow>
 								{this.state.images.map((image, index) => (
-									<MDBCol xs="12" sm ="6" md="6" lg="4" xl="3" key={index}>
+									<MDBCol xs="6" sm="6" md="6" lg="4" xl="3" key={index}>
 										<MDBView
 											className="image-detail"
 											hover
@@ -68,7 +68,7 @@ class ImagePreview extends Component {
 												/>
 											</figure>
 
-											<MDBMask className="flex-  " overlay="white-slight">
+											<MDBMask className="flex-center" overlay="white-slight">
 												<p className="white-text">{image.fields.title}</p>
 											</MDBMask>
 										</MDBView>

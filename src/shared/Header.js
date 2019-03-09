@@ -18,10 +18,9 @@ class Header extends Component {
         return (
             <Wrapper>
                 <div className="header">
-                <Animation type={this.props.offset > 60 ? "fadeOutLeftBig" : "fadeInLeftBig"} duration="1s">
-                    <Logo size='80px' top='100px' to="/"/>
-                </Animation>
-
+                    <Animation type={this.props.offset > 50 ? "fadeOutLeftBig" : "fadeInLeftBig"} duration="1s">
+                        <Logo size='80px' top='100px' to="/"/>
+                    </Animation> 
                 </div>
                 <Navbar offset={this.props.offset}/>
             </Wrapper>
