@@ -8,9 +8,11 @@ import {
   MDBNavLink,
   MDBNavbarToggler,
   MDBCollapse,
+  Animation
 } from "mdbreact";
 import { Link } from 'react-router-dom';
 import * as Router from 'react-router';
+import Logo from './Logo';
 
 class NavbarPage extends Component {
   state = {
@@ -33,14 +35,13 @@ class NavbarPage extends Component {
   render() {
     return (
       // <Wrapper>
-      //  TODO: Fix the 'jump'
-      //        When state.offset > 100 and true condition is fixed-top 
       <MDBNavbar className={this.props.offset >= 100 ? "fixed-top" : ""} color="cyan" dark expand="md">
       <MDBContainer>
         <MDBNavbarBrand>
-          <Link to="/"><strong className="white-text">Lesly's Pastries</strong></Link>
+        <Animation type={this.props.offset > 60 ? "fadeInLeftBig" : "fadeOutLeftBig"} duration="0.5s">
+            <Logo size='40px' top='0' to="/"/>
+        </Animation>
         </MDBNavbarBrand>
-
         <MDBNavbarToggler onClick={this.toggleCollapse} />
         <MDBCollapse id="navbarCollapse" isOpen={this.state.isOpen} navbar>
           <MDBNavbarNav right>
