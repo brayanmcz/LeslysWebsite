@@ -16,10 +16,10 @@ class ContactForm extends Component {
            
             <MDBContainer>
               <MDBRow>
-                <MDBCol md="6">
+                <MDBCol md="12">
                 <MDBCard>
                 <MDBCardBody>  
-                  <form action="https://formcarry.com/s/FzMfZR9DNcX" method="POST" accept-charset="UTF-8">
+                  <form action="sms:+14158717215?body=TEST" method="POST" accept-charset="UTF-8">
                     <p className="h5 text-center mb-4">Get In Touch !</p>
                     <div className="grey-text">
                       <MDBInput
