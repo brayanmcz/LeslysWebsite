@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './header/Navbar';
 import Logo from './header/Logo';
 import styled from 'styled-components';
+import { Animation } from 'mdbreact'
 
 const Wrapper = styled.div`
     .header{
@@ -12,13 +13,16 @@ const Wrapper = styled.div`
 `;
 
 class Header extends Component {
+
     render () {
         return (
             <Wrapper>
                 <div className="header">
-                    <Logo/>
+                    <Animation type={this.props.offset > 50 ? "fadeOutLeftBig" : "fadeInLeftBig"} duration="1s">
+                        <Logo size='80px' top='100px' to="/"/>
+                    </Animation> 
                 </div>
-                <Navbar/>
+                <Navbar offset={this.props.offset}/>
             </Wrapper>
         );
     }

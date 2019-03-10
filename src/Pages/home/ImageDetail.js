@@ -18,28 +18,30 @@ class ImageDetail extends Component {
   componentWillReceiveProps() {
     this.setState({
       modal14: true
-    });    
+    });
   }
 
   render() {
     return (
       <MDBContainer>
-        <MDBModal isOpen={this.props.modal14} toggle={this.props.toggle(14)} centered>
-        <MDBRow>
-        <MDBCol md="12">
-            <img
-              src={this.props.image.fields.image[0].fields.file.url}
-              alt={this.props.image.fields.title}
-              className="img-fluid"
-            />
-        </MDBCol>
-      </MDBRow>
+        <MDBModal
+          isOpen={this.props.modal14}
+          toggle={this.props.toggle(14)}
+          centered
+        >
+          <MDBRow>
+            <MDBCol md="12">
+              <img
+                src={this.props.image.fields.image[0].fields.file.url}
+                alt={this.props.image.fields.title}
+                className="img-fluid"
+              />
+            </MDBCol>
+          </MDBRow>
           <MDBModalHeader toggle={this.props.toggle(14)}>
             {this.props.image.fields.title}
           </MDBModalHeader>
-          <MDBModalBody>
-            {this.props.image.fields.description}
-          </MDBModalBody>
+          <MDBModalBody>{this.props.image.fields.description}</MDBModalBody>
           <MDBModalFooter>
             <MDBBtn color="pink accent-1" onClick={this.props.toggle(14)}>
               View Recipe

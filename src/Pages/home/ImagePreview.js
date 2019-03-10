@@ -10,7 +10,6 @@ const Wrapper = styled.div`
 		cursor: pointer;
 		-webkit-touch-callout: none; /* iOS Safari */
 		-webkit-user-select: none; /* Safari */
-		-khtml-user-select: none; /* Konqueror HTML */
 		-moz-user-select: none; /* Firefox */
 		-ms-user-select: none; /* Internet Explorer/Edge */
 		user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
@@ -50,7 +49,7 @@ class ImagePreview extends Component {
 						<div className="mdb-lightbox no-margin">
 							<MDBRow>
 								{this.state.images.map((image, index) => (
-									<MDBCol md="6" lg="4" xl="3" key={index}>
+									<MDBCol xs="6" sm="6" md="6" lg="4" xl="3" key={index}>
 										<MDBView
 											className="image-detail"
 											hover
@@ -60,13 +59,14 @@ class ImagePreview extends Component {
 													modal14: true
 												})}
 										>
+											<figure>
 												<img
 													src={image.fields.image[0].fields.file.url}
 													alt={image.fields.title}
 													className="img-fluid"
 												/>
-
-											<MDBMask className="flex-center mask" overlay="cyan-slight">
+											</figure>
+											<MDBMask className="flex-center" overlay="white-slight">
 												<p className="white-text">{image.fields.title}</p>
 											</MDBMask>
 										</MDBView>

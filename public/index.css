@@ -1,0 +1,17 @@
+@media (max-width: 575px) { 
+    body {
+        background-color: #4dd0e1 !important;
+    }
+
+/* PREVENT LANDSCAPE MODE */
+/* @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    html {
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      width: 100vh;
+      overflow-x: hidden;
+      position: absolute;
+      top: 105%;
+      left: 0;
+    }
+  } */
