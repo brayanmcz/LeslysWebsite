@@ -4,8 +4,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './shared/Header';
 import HomePage from './Pages/Home.js';
 import AboutPage from './Pages/About';
+import ContactPage from './Pages/Contact';
+import ThanksPage from './Pages/Thanks'
+
 import styled from 'styled-components';
-import ContactForm from './Pages/contact/ContactForm';
 
 const Wrapper = styled.div`
 
@@ -57,7 +59,8 @@ class App extends Component {
               <div className={this.state.offset >= 100 ? "component-container" : ""}>
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/about" component={AboutPage} />
-                <Route exact path="/contact" component={ContactForm}/>
+                <Route exact path="/contact" component={ContactPage}/>
+                <Route exact path="/thanks" component={ThanksPage}/>
               </div>              
             </Wrapper>
         </Router>
