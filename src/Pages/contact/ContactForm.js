@@ -66,7 +66,7 @@ class ContactForm extends Component {
             <MDBCol md="12">
               <MDBCard>
                 <MDBCardBody>
-                <form name="contact" method="post">
+                <form name="contact" method="post" action="/thanks">
           <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>Your Name: <input type="text" name="name"/></label>
