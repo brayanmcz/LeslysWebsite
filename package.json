@@ -6,6 +6,7 @@
     "braces": "^2.3.2",
     "contentful": "^7.3.0",
     "create-react-app": "^2.1.5",
+    "detect-mobile-browser": "^5.0.0",
     "mdbreact": "^4.10.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
