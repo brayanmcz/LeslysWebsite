@@ -3,9 +3,6 @@ import {
   MDBContainer,
   MDBRow,
   MDBCol,
-  MDBBtn,
-  MDBIcon,
-  MDBInput,
   MDBCard,
   MDBCardBody
 } from "mdbreact";
@@ -69,7 +66,7 @@ class ContactForm extends Component {
             <MDBCol md="12">
               <MDBCard>
                 <MDBCardBody>
-                  <form name="contact" netlify>
+                  <form name="contact" netlify="true">
                     <p>
                       <label>
                         Name <input type="text" name="name" />
