@@ -66,27 +66,21 @@ class ContactForm extends Component {
             <MDBCol md="12">
               <MDBCard>
                 <MDBCardBody>
-                  <form name="comments-queue" netlify-honeypot="full-name" action="/thanks" netlify>
-                    <p class="honey">
-                      <input name="path" value="{{ page.url }}" />
-                      <label>Your full name: <input name="full-name"/></label>
-                    </p>
-                      <p>
-                        <label for="name">Your name<small>What should I call you?</small></label>
-                        <input type="text" name="name" id="name" />
-                      </p>
-                      <p>
-                        <label for="email">Your email<small>I'll never spam you. I promise.</small></label>
-                        <input type="email" name="email" id="email" />
-                      </p>
-                      <p>
-                        <label for="comment">Your comment<small>Markdown is fine.</small></label>
-                        <textarea name="comment" id="comment"></textarea>
-                      </p>
-                      <p>
-                        <button type="submit" class="btn">Post your comment</button>
-                      </p>
-                </form>
+                <form name="contact" method="post">
+          <input type="hidden" name="form-name" value="contact" />
+          <p>
+            <label>Your Name: <input type="text" name="name"/></label>
+          </p>
+          <p>
+            <label>Your Email: <input type="email" name="email"/></label>
+          </p>
+          <p>
+            <label>Message: <textarea name="message"></textarea></label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
