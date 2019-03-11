@@ -23,25 +23,25 @@ class ContactForm extends Component {
 
   componentDidMount() {
     var isMobile = {
-      Android: function() {
+      Android: function () {
         return navigator.userAgent.match(/Android/i);
       },
-      BlackBerry: function() {
+      BlackBerry: function () {
         return navigator.userAgent.match(/BlackBerry/i);
       },
-      iOS: function() {
+      iOS: function () {
         return navigator.userAgent.match(/iPhone|iPad|iPod/i);
       },
-      Opera: function() {
+      Opera: function () {
         return navigator.userAgent.match(/Opera Mini/i);
       },
-      Windows: function() {
+      Windows: function () {
         return (
           navigator.userAgent.match(/IEMobile/i) ||
           navigator.userAgent.match(/WPDesktop/i)
         );
       },
-      any: function() {
+      any: function () {
         return (
           isMobile.Android() ||
           isMobile.BlackBerry() ||
@@ -66,29 +66,35 @@ class ContactForm extends Component {
             <MDBCol md="12">
               <MDBCard>
                 <MDBCardBody>
-                  <form name="contact" netlify="true">
-                    <p>
-                      <label>
-                        Name <input type="text" name="name" />
-                      </label>
+                  <form name="comments-queue" netlify-honeypot="full-name" action="/thanks" netlify>
+                    <p class="honey">
+                      <input name="path" value="{{ page.url }}" />
+                      <label>Your full name: <input name="full-name"/></label>
                     </p>
-                    <p>
-                      <label>
-                        Email <input type="email" name="email" />
-                      </label>
-                    </p>
-                    <p>
-                      <button type="submit">Send</button>
-                    </p>
-                  </form>
+                      <p>
+                        <label for="name">Your name<small>What should I call you?</small></label>
+                        <input type="text" name="name" id="name" />
+                      </p>
+                      <p>
+                        <label for="email">Your email<small>I'll never spam you. I promise.</small></label>
+                        <input type="email" name="email" id="email" />
+                      </p>
+                      <p>
+                        <label for="comment">Your comment<small>Markdown is fine.</small></label>
+                        <textarea name="comment" id="comment"></textarea>
+                      </p>
+                      <p>
+                        <button type="submit" class="btn">Post your comment</button>
+                      </p>
+                </form>
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
           </MDBRow>
         </MDBContainer>
       </Wrapper>
-    );
-  }
-}
-
-export default ContactForm;
+        );
+      }
+    }
+    
+    export default ContactForm;
