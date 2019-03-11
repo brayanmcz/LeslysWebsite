@@ -69,21 +69,21 @@ class ContactForm extends Component {
             <MDBCol md="12">
               <MDBCard>
                 <MDBCardBody>
-                <form name="test" method="post" netlify action="https://google.com">
-                  <input type="hidden" name="form-name" value="test" />
-                  <p>
-                    <label>first: <input type="text" name="name"/></label>
-                  </p>
-                  <p>
-                    <label>Your Email: <input type="email" name="email"/></label>
-                  </p>
-                  <p>
-                    <label>Message: <textarea name="message"></textarea></label>
-                  </p>
-                  <p>
-                    <button type="submit">Send</button>
-                  </p>
-                </form>
+                  <form name="contact" netlify>
+                    <p>
+                      <label>
+                        Name <input type="text" name="name" />
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        Email <input type="email" name="email" />
+                      </label>
+                    </p>
+                    <p>
+                      <button type="submit">Send</button>
+                    </p>
+                  </form>
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
