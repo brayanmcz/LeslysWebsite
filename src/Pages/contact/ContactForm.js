@@ -53,7 +53,7 @@ class ContactForm extends Component {
                 <MDBCol md="12">
                 <MDBCard>
                 <MDBCardBody>  
-                  <form netlify method="POST" netlify-data="true">
+                  <form name="contact" netlify method="POST" netlify-data="true">
                     <p className="h5 text-center mb-4">Get In Touch !</p>
                     <div className="grey-text">
                       <MDBInput
