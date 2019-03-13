@@ -27,6 +27,7 @@ class ContactForm extends Component {
                     type="text"
                     id="defaultFormContactNameEx"
                     className="form-control"
+                    name="name"
                     required
                   />
                   <br />
@@ -37,6 +38,7 @@ class ContactForm extends Component {
                     type="email"
                     id="defaultFormContactEmailEx"
                     className="form-control"
+                    name="email"
                     required
                   />
                   <br />
@@ -50,6 +52,7 @@ class ContactForm extends Component {
                     type="text"
                     id="defaultFormContactSubjectEx"
                     className="form-control"
+                    name="subject"
                   />
                   <br />
                   <label
@@ -63,6 +66,7 @@ class ContactForm extends Component {
                     id="defaultFormContactMessageEx"
                     className="form-control"
                     rows="5"
+                    name="message"
                     required
                   />
                   <div className="text-center mt-4">
