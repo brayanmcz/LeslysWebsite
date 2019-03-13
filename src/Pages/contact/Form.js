@@ -68,7 +68,8 @@ class ContactForm extends Component {
                     rows="5"
                     name="message"
                     required
-                  />
+                  >
+                  </textarea>
                   <div className="text-center mt-4">
                     <MDBBtn color="pink" type="submit">
                       Send
