@@ -71,10 +71,8 @@ class ContactForm extends Component {
                   >
                   </textarea>
                   <div className="text-center mt-4">
-                    <MDBBtn color="pink" type="submit">
-                      Send
-                      <MDBIcon icon="paper-plane" className="ml-2" />
-                    </MDBBtn>
+                    <button className="pink" type="submit">SEND</button>
+
                   </div>
                 </form>
               </MDBCol>
