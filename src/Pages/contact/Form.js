@@ -1,30 +1,40 @@
 import React, { Component } from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon } from 'mdbreact';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  .pink-text {
+    color: pink;
+  }
+`;
 
 class ContactForm extends Component {
     render() {
         return (
-            <MDBContainer>
+          <Wrapper>
+           <MDBContainer>
             <MDBRow>
-              <MDBCol md="6">
+              <MDBCol md="12">
                 <form name="contact" netlify="true" action="/thanks">
                   <p className="h4 text-center mb-4">Get in Touch!</p>
                   <label htmlFor="defaultFormContactNameEx" className="grey-text">
-                    Your name
+                    Name <span className="pink-text">*</span>
                   </label>
                   <input
                     type="text"
                     id="defaultFormContactNameEx"
                     className="form-control"
+                    required
                   />
                   <br />
                   <label htmlFor="defaultFormContactEmailEx" className="grey-text">
-                    Your email
+                    Email <span className="pink-text">*</span>
                   </label>
                   <input
                     type="email"
                     id="defaultFormContactEmailEx"
                     className="form-control"
+                    required
                   />
                   <br />
                   <label
@@ -43,13 +53,14 @@ class ContactForm extends Component {
                     htmlFor="defaultFormContactMessageEx"
                     className="grey-text"
                   >
-                    Your message
+                    Message <span className="pink-text">*</span>
                   </label>
                   <textarea
                     type="text"
                     id="defaultFormContactMessageEx"
                     className="form-control"
-                    rows="3"
+                    rows="5"
+                    required
                   />
                   <div className="text-center mt-4">
                     <MDBBtn color="pink" type="submit">
@@ -61,6 +72,7 @@ class ContactForm extends Component {
               </MDBCol>
             </MDBRow>
           </MDBContainer>
+          </Wrapper>
         )
     }
 }
