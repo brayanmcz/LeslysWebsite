@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody } from "mdbreact";
-import ContactForm from "./contact/Form";
+import ContactForm from "./contact/ContactForm";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
