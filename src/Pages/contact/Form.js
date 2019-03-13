@@ -15,7 +15,10 @@ class ContactForm extends Component {
            <MDBContainer>
             <MDBRow>
               <MDBCol md="12">
-                <form name="contact" netlify="true" action="/thanks">
+              {
+                //<form name="contact" netlify="true" action="/thanks">
+              }
+                <form name="contact" netlify="true">
                   <p className="h4 text-center mb-4">Get in Touch!</p>
                   <label htmlFor="defaultFormContactNameEx" className="grey-text">
                     Name <span className="pink-text">*</span>
