@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-import {
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBCardBody
-} from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody } from "mdbreact";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -23,25 +17,25 @@ class ContactForm extends Component {
 
   componentDidMount() {
     var isMobile = {
-      Android: function () {
+      Android: function() {
         return navigator.userAgent.match(/Android/i);
       },
-      BlackBerry: function () {
+      BlackBerry: function() {
         return navigator.userAgent.match(/BlackBerry/i);
       },
-      iOS: function () {
+      iOS: function() {
         return navigator.userAgent.match(/iPhone|iPad|iPod/i);
       },
-      Opera: function () {
+      Opera: function() {
         return navigator.userAgent.match(/Opera Mini/i);
       },
-      Windows: function () {
+      Windows: function() {
         return (
           navigator.userAgent.match(/IEMobile/i) ||
           navigator.userAgent.match(/WPDesktop/i)
         );
       },
-      any: function () {
+      any: function() {
         return (
           isMobile.Android() ||
           isMobile.BlackBerry() ||
@@ -66,29 +60,35 @@ class ContactForm extends Component {
             <MDBCol md="12">
               <MDBCard>
                 <MDBCardBody>
-                <form name="contact" method="post" action="/thanks">
-          <input type="hidden" name="form-name" value="contact" />
-          <p>
-            <label>Your Name: <input type="text" name="name"/></label>
-          </p>
-          <p>
-            <label>Your Email: <input type="email" name="email"/></label>
-          </p>
-          <p>
-            <label>Message: <textarea name="message"></textarea></label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
+                  <form name="contact" method="post" action="/thanks">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p>
+                      <label>
+                        Your Name: <input type="text" name="name" />
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        Your Email: <input type="email" name="email" />
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        Message: <textarea name="message" />
+                      </label>
+                    </p>
+                    <p>
+                      <button type="submit">Send</button>
+                    </p>
+                  </form>
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
           </MDBRow>
         </MDBContainer>
       </Wrapper>
-        );
-      }
-    }
-    
-    export default ContactForm;
+    );
+  }
+}
+
+export default ContactForm;
