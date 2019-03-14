@@ -25,8 +25,8 @@ class ContactForm extends Component {
                 <label>Subject</label>
                 <select className="browser-default custom-select mb-4" name="subject">
                     <option value="" disabled>Choose option</option>
-                    <option value="Question" selected>Ask a Question</option>
-                    <option value="Order">Order Inqury</option>
+                    <option value="Question" selected>Question</option>
+                    <option value="Order">Order Inquiry</option>
                 </select>
                 <div className="form-group">
                     <textarea className="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message" name="message"></textarea>
@@ -34,37 +34,6 @@ class ContactForm extends Component {
                 <button className="btn btn-info btn-block" type="submit">Send<i class="fab fa-lg fa-telegram-plane send-icon"></i></button>        
                 </form>
             }  
-            {
-              //   <form name="contact" method="post" action="/thanks">
-              //   <input type="hidden" name="form-name" value="contact" />
-              //   <p>
-              //     <label>
-              //       Your Name: <input type="text" name="name" />
-              //     </label>
-              //   </p>
-              //   <p>
-              //     <label>
-              //       Your Email: <input type="email" name="email" />
-              //     </label>
-              //   </p>
-              //   <p>
-              //   <select name="subject">
-              //     <option value="" disabled>Choose Option</option>
-              //     <option value="Question" >Ask a Question</option>
-              //     <option value="Order" >Order Inquiry </option>
-              //   </select>
-              //   </p>
-              //   <p>
-              //     <label>
-              //       Message: <textarea name="message" />
-              //     </label>
-              //   </p>
-              //   <p>
-              //     <button type="submit">Send</button>
-              //   </p>
-              // </form>
-            }
-
           </Wrapper>
         )
     }
