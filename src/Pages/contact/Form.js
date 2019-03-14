@@ -16,7 +16,7 @@ class ContactForm extends Component {
     render() {
         return (
           <Wrapper>
-          <form className="text-center border border-light p-5" name="contact" method="post" action="/thanks">       
+          <form className="text-center border border-light p-5" name="contact" method="post" >       
               <p className="h4 mb-4">Contact us</p>
           
           
