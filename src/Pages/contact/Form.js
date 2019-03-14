@@ -49,8 +49,8 @@ class ContactForm extends Component {
                 <p>
                 <select name="subject">
                   <option value="" disabled>Choose Option</option>
-                  <option value="1" >Ask a Question</option>
-                  <option value="2" >Order Inquiry </option>
+                  <option value="Question" >Ask a Question</option>
+                  <option value="Order" >Order Inquiry </option>
                 </select>
                 </p>
                 <p>
