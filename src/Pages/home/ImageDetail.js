@@ -9,6 +9,14 @@ import {
   MDBRow,
   MDBCol
 } from "mdbreact";
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  .img-square {
+    height: auto !important;
+    width: 100% !important;
+  }
+`;
 
 class ImageDetail extends Component {
   state = {
@@ -23,6 +31,7 @@ class ImageDetail extends Component {
 
   render() {
     return (
+      <Wrapper>
       <MDBContainer>
         <MDBModal
           isOpen={this.props.modal14}
@@ -34,7 +43,7 @@ class ImageDetail extends Component {
               <img
                 src={this.props.image.fields.image[0].fields.file.url}
                 alt={this.props.image.fields.title}
-                className="img-fluid"
+                className="img-fluid img-square"
               />
             </MDBCol>
           </MDBRow>
@@ -43,12 +52,14 @@ class ImageDetail extends Component {
           </MDBModalHeader>
           <MDBModalBody>{this.props.image.fields.description}</MDBModalBody>
           <MDBModalFooter>
-            <MDBBtn color="pink accent-1" onClick={this.props.toggle(14)}>
-              View Recipe
+            <MDBBtn className="pink accent-1" onClick={this.props.toggle(14)}>
+              Close
             </MDBBtn>
           </MDBModalFooter>
         </MDBModal>
       </MDBContainer>
+      </Wrapper>
+
     );
   }
 }

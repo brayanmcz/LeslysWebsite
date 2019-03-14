@@ -25,13 +25,13 @@ class ContactForm extends Component {
                 <label>Subject</label>
                 <select className="browser-default custom-select mb-4" name="subject">
                     <option value="" disabled>Choose option</option>
-                    <option value="Question" selected>Question</option>
+                    <option value="Question" defaultValue>Question</option>
                     <option value="Order">Order Inquiry</option>
                 </select>
                 <div className="form-group">
                     <textarea className="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message" name="message"></textarea>
                 </div>
-                <button className="btn btn-info btn-block" type="submit">Send<i class="fab fa-lg fa-telegram-plane send-icon"></i></button>        
+                <button className="btn pink accent-1 btn-block" type="submit">Send<i className="fab fa-lg fa-telegram-plane send-icon"></i></button>        
                 </form>
             }  
           </Wrapper>

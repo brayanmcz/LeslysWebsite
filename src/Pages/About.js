@@ -63,6 +63,11 @@ const Wrapper = styled.div`
 	.card{
 		margin-bottom: 20px !important;
 	}
+
+	.bold {
+		font-weight: bold;
+		color:  #ff80ab;
+	}
 `;
 
 class AboutPage extends Component {
@@ -113,10 +118,33 @@ class AboutPage extends Component {
 						<MDBCol sm="6" md="8" lg="9">
 							<MDBCard>
 								<MDBCardBody>
-									<MDBCardTitle><em>Hi, thanks for being here!</em></MDBCardTitle>
+									<br/>
+									<MDBCardTitle className="text-center"><em className="bold">About Me</em></MDBCardTitle>
 									<MDBCardText>	
-									This is a test.
-									
+									<br/>
+									<br/>
+
+									<p>
+										So you want to find out a little bit more about me, huh? Who is this young lady and should I trust her
+										with making pastries for me? Can she bake? Can she decorate? Okay, let's get started! I'm Lesly a chef-in-training
+										from ag-town Modesto, California. I'm ain my early 20's, a lover of dogs, miniature things, good old printed
+										photos, and Naruto.
+									</p>
+
+									<p>
+										I started this website to share my work and love for all things food, cooking, and baking. I'm the kind of 
+										person who loves putting plenty of time, heart, and soul into her work and putting it out for display.
+									</p>
+
+									<p>
+										Im no chef. At least not yet! I have some formal training, but lots of trial and error practice. I make mistakes
+										and I learn from them. With each mistake I work to perfect my craft.
+									</p>
+
+									<p>
+										I'm working on going back to school to continue in my formal training.
+									</p>
+
 									</MDBCardText>	
 								</MDBCardBody>
 							</MDBCard>

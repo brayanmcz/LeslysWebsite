@@ -14,6 +14,13 @@ const Wrapper = styled.div`
 		-ms-user-select: none; /* Internet Explorer/Edge */
 		user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 	}
+
+	.flex-center {
+		margin-top: -15px;
+	}
+
+	
+
 `;
 
 class ImagePreview extends Component {
@@ -59,14 +66,14 @@ class ImagePreview extends Component {
 													modal14: true
 												})}
 										>
-											<figure>
+											<figure className="">
 												<img
 													src={image.fields.image[0].fields.file.url}
 													alt={image.fields.title}
 													className="img-fluid"
 												/>
 											</figure>
-											<MDBMask className="flex-center" overlay="white-slight">
+											<MDBMask className="flex-center" overlay="pink-slight">
 												<p className="white-text">{image.fields.title}</p>
 											</MDBMask>
 										</MDBView>
