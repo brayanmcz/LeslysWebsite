@@ -25,8 +25,8 @@ class ContactForm extends Component {
                 <label>Subject</label>
                 <select className="browser-default custom-select mb-4" name="subject">
                     <option value="" disabled>Choose option</option>
-                    <option value="1" selected>Ask a Question</option>
-                    <option value="2">Order Inqury</option>
+                    <option value="Question" selected>Ask a Question</option>
+                    <option value="Order">Order Inqury</option>
                 </select>
                 <div className="form-group">
                     <textarea className="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message" name="message"></textarea>
