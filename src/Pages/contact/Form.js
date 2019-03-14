@@ -26,10 +26,7 @@ class ContactForm extends Component {
               <label>Subject</label>
               
           
-              <div className="form-group">
-                  <textarea className="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message" name="message"></textarea>
-              </div>
-
+           
           
               <button className="btn btn-info btn-block" type="submit">Send<i class="fab fa-lg fa-telegram-plane send-icon"></i></button>        
 
