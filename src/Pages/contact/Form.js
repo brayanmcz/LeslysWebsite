@@ -1,10 +1,14 @@
 import React, { Component } from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon } from 'mdbreact';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
   .pink-text {
     color: pink;
+  }
+
+  .send-icon {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 `;
 
@@ -12,72 +16,57 @@ class ContactForm extends Component {
     render() {
         return (
           <Wrapper>
-           <MDBContainer>
-            <MDBRow>
-              <MDBCol md="12">
-              {
-                //<form name="contact" netlify="true" action="/thanks">
-              }
-                <form name="contact" netlify="true">
-                  <p className="h4 text-center mb-4">Get in Touch!</p>
-                  <label htmlFor="defaultFormContactNameEx" className="grey-text">
-                    Name <span className="pink-text">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="defaultFormContactNameEx"
-                    className="form-control"
-                    name="name"
-                    required
-                  />
-                  <br />
-                  <label htmlFor="defaultFormContactEmailEx" className="grey-text">
-                    Email <span className="pink-text">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="defaultFormContactEmailEx"
-                    className="form-control"
-                    name="email"
-                    required
-                  />
-                  <br />
-                  <label
-                    htmlFor="defaultFormContactSubjectEx"
-                    className="grey-text"
-                  >
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="defaultFormContactSubjectEx"
-                    className="form-control"
-                    name="subject"
-                  />
-                  <br />
-                  <label
-                    htmlFor="defaultFormContactMessageEx"
-                    className="grey-text"
-                  >
-                    Message <span className="pink-text">*</span>
-                  </label>
-                  <textarea
-                    type="text"
-                    id="defaultFormContactMessageEx"
-                    className="form-control"
-                    rows="5"
-                    name="message"
-                    required
-                  >
-                  </textarea>
-                  <div className="text-center mt-4">
-                    <button className="pink" type="submit">SEND</button>
+          <form className="text-center border border-light p-5" name="contact" method="post" action="/thanks">       
+              <p className="h4 mb-4">Contact us</p>
+          
+          
+              <input type="text" id="defaultContactFormName" className="form-control mb-4" placeholder="Name" name="name"/>
+              <input type="email" id="defaultContactFormEmail" className="form-control mb-4" placeholder="E-mail" name="email"/>
+          
+              <label>Subject</label>
+              <select className="browser-default custom-select mb-4" name="subject">
+                  <option value="" disabled>Choose option</option>
+                  <option value="1" selected>Ask a Question</option>
+                  <option value="2">Order Inqury</option>
+              </select>
+          
+              <div className="form-group">
+                  <textarea className="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message" name="message"></textarea>
+              </div>
 
-                  </div>
-                </form>
-              </MDBCol>
-            </MDBRow>
-          </MDBContainer>
+          
+              <button className="btn btn-info btn-block" type="submit">Send<i class="fab fa-lg fa-telegram-plane send-icon"></i></button>        
+
+          
+              </form>
+              {
+
+
+              //   <form name="contact" method="post" action="/thanks">
+              //   <input type="hidden" name="form-name" value="contact" />
+              //   <p>
+              //     <label>
+              //       Your Name: <input type="text" name="name" />
+              //     </label>
+              //   </p>
+              //   <p>
+              //     <label>
+              //       Your Email: <input type="email" name="email" />
+              //     </label>
+              //   </p>
+              //   <p>
+              //     <label>
+              //       Message: <textarea name="message" />
+              //     </label>
+              //   </p>
+              //   <p>
+              //     <button type="submit">Send</button>
+              //   </p>
+              // </form>
+              
+                
+              }
+
           </Wrapper>
         )
     }

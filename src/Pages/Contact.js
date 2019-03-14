@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody } from "mdbreact";
-import ContactForm from "./contact/ContactForm";
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import ContactForm from "./contact/Form";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
+
+  
   padding-top: 20px;
   padding-bottom: 20px;
 `;
@@ -14,12 +16,8 @@ class ContactPage extends Component {
       <Wrapper>
         <MDBContainer>
           <MDBRow>
-            <MDBCol md="6">
-              <MDBCard>
-                <MDBCardBody>
+            <MDBCol md="12">
                   <ContactForm />
-                </MDBCardBody>
-              </MDBCard>
             </MDBCol>
           </MDBRow>
         </MDBContainer>
