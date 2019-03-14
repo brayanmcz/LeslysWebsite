@@ -47,6 +47,13 @@ class ContactForm extends Component {
                   </label>
                 </p>
                 <p>
+                <select name="subject">
+                  <option value="" disabled>Choose Option</option>
+                  <option value="1" >Ask a Question</option>
+                  <option value="2" >Order Inquiry </option>
+                </select>
+                </p>
+                <p>
                   <label>
                     Message: <textarea name="message" />
                   </label>
