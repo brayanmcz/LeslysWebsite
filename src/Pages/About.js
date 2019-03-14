@@ -97,17 +97,17 @@ class AboutPage extends Component {
 									</div>
 									<div className="flex-container">
 										<div className="icon-container">
-											<a href="https://google.com" target="__blank">
+											<a href="https://www.instagram.com/ecz.lesly/" target="__blank">
 												<MDBIcon fab className="social-icon" icon="instagram " size="1x" />
 											</a>
 										</div>
 										<div className="icon-container">
-											<a href="https://google.com" target="__blank">
+											<a href="https://www.facebook.com/lesly.castro.779" target="__blank">
 												<MDBIcon fab className="social-icon" icon="facebook-f" size="1x" />
 											</a>
 										</div>
 										<div className="icon-container">
-											<a href="https://google.com" target="__blank">
+											<a href="https://twitter.com" target="__blank">
 												<MDBIcon fab className="social-icon" icon="twitter" size="1x" />
 											</a>
 										</div>
@@ -123,27 +123,26 @@ class AboutPage extends Component {
 									<MDBCardText>	
 									<br/>
 									<br/>
-
 									<p>
 										So you want to find out a little bit more about me, huh? Who is this young lady and should I trust her
 										with making pastries for me? Can she bake? Can she decorate? Okay, let's get started! I'm Lesly a chef-in-training
-										from ag-town Modesto, California. I'm ain my early 20's, a lover of dogs, miniature things, good old printed
+										from ag-town Modesto, California. I'm in my early 20's, a lover of dogs, miniature things, good old printed
 										photos, and Naruto.
 									</p>
-
 									<p>
 										I started this website to share my work and love for all things food, cooking, and baking. I'm the kind of 
 										person who loves putting plenty of time, heart, and soul into her work and putting it out for display.
 									</p>
-
 									<p>
 										Im no chef. At least not yet! I have some formal training, but lots of trial and error practice. I make mistakes
 										and I learn from them. With each mistake I work to perfect my craft.
 									</p>
-
 									<p>
-										I'm working on going back to school to continue in my formal training.
+										I'm working on going back to school to continue in my formal training, but for now I work as a cachier at a local
+										hispanic fast food joint. 
 									</p>
+
+									<em className="text-center">My story is still developing...</em>
 
 									</MDBCardText>	
 								</MDBCardBody>

@@ -11,6 +11,10 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
 
+  ::-webkit-scrollbar { 
+      display: none !important; 
+  }
+
   background-color: white;
 
   .status-bar{
@@ -27,6 +31,7 @@ const Wrapper = styled.div`
     margin-top: 76px !important;
   }
 `;
+
 class App extends Component {
   state = {
     offset: 0
