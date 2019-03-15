@@ -122,27 +122,31 @@ class AboutPage extends Component {
 									<MDBCardTitle className="text-center"><em className="bold">About Me</em></MDBCardTitle>
 									<MDBCardText>	
 									<br/>
-									<br/>
-									<p>
+						
 										So you want to find out a little bit more about me, huh? Who is this young lady and should I trust her
 										with making pastries for me? Can she bake? Can she decorate? Okay, let's get started! I'm Lesly a chef-in-training
 										from ag-town Modesto, California. I'm in my early 20's, a lover of dogs, miniature things, good old printed
 										photos, and Naruto.
-									</p>
-									<p>
+										<br/>
+										<br/>
+
+
 										I started this website to share my work and love for all things food, cooking, and baking. I'm the kind of 
 										person who loves putting plenty of time, heart, and soul into her work and putting it out for display.
-									</p>
-									<p>
-										Im no chef. At least not yet! I have some formal training, but lots of trial and error practice. I make mistakes
-										and I learn from them. With each mistake I work to perfect my craft.
-									</p>
-									<p>
-										I'm working on going back to school to continue in my formal training, but for now I work as a cachier at a local
-										hispanic fast food joint. 
-									</p>
+										<br/>
+										<br/>
 
-									<em className="text-center">My story is still developing...</em>
+										Im no chef, at least <em>not yet!</em> I have some formal training, but lots of trial and error practice. I make mistakes
+										and I learn from them. With each mistake I work to perfect my craft.
+										<br/>
+										<br/>
+
+										I'm working on going back to school to continue in my formal training, but for now I work as a cashier at a local
+										hispanic fast food joint. 
+										<br/>
+										<br/>
+
+										<em className="text-center">My story is still developing...</em>
 
 									</MDBCardText>	
 								</MDBCardBody>
